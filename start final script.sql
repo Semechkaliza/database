@@ -1,0 +1,1 @@
+insert into USERS(LOGIN,PASSWORD,NAME,SNAME,ROLE) values (admin,123,liza,grishkina,ADMIN);
