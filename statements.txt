@@ -1,0 +1,26 @@
+1)select LOGIN,NAME,SNAME from USERS where rating>=0;
+	select LOGIN from SKILLS where JAVA=(select MAX('JAVA') from SKILLS);
+select NAME,SNAME,RESULT
+from users join preview
+on users.LOGIN=preview.USERS_LOGIN
+where RESULT=(select result
+from preview join vacancy
+on preview.VACANCY_ID=vacancy.ID
+where piority_skill='Java');
+select users_LOGIN,NAME,SNAME from USERS join SKILLS ON users.LOGIN=skills.USERS_LOGIN where JAVA=(select MAX(JAVA) from SKILLS);
+
+insert into vacancy value(1,'EPAM','Java Junior Developer',300,'Java',' ');
+insert into vacancy value(2,'IBM','HR Manager',400,'SQL',' ');
+insert into preview value (1,'user1',20171212,1600,'Krasavik',8);
+insert into preview value (1,'user2',20171212,1700,'Krasavik',5);
+insert into preview value (2,'user7',20171213,1600,'K3B',-1);
+insert into preview value (2,'user5',20171213,1000,'Krasavik',10);
+2)use HR_system;
+select * from skills;
+insert into skills value ('user1','1','2','3','2','0','2','0','other skills');
+insert into skills value ('user5','1','2','3','2','0','2','0','photoshop');
+insert into skills value ('user4','4','5','1','0','0','0','0',' ');
+insert into skills value ('user2','1','0','3','1','0','4','0',' ');
+insert into skills value ('user3','0','0','0','0','0','0','0',' ');
+insert into skills value ('user8','0','0','5','2','0','4','1',' ');
+insert into skills value ('user7','0','3','2','3','1','5','3',' ');
